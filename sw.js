@@ -58,7 +58,6 @@ self.addEventListener('fetch', function(event) {
   }
 
   // cache data
-  
 
   else {
     event.respondWith(
