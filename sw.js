@@ -10,6 +10,7 @@ let urlsToCache = [
   '/',
   '/js/index.js',
   '/js/converter.js',
+  '/js/idb.js',
   '/css/stylesheet.css',
   'https://code.jquery.com/jquery-3.3.1.min.js',
   'https://stackpath.bootstrapcdn.com/bootswatch/4.1.1/journal/bootstrap.min.css',
@@ -42,28 +43,29 @@ self.addEventListener('activate', function(event) {
   );
 });
 
-self.addEventListener('waiting', function() {
-  console.log('SW is in waiting state')
-});
-
 self.addEventListener('fetch', function(event) {
-
-  const url = new URL(event.request.url);
-
-  // cache material icons
-  if (url.hostname === 'fonts.gstatic.com') {
-    caches.match(url.href).then(function(response) {
-      return response || fetch(event.request);
-    })
-  }
-
-  // cache data
-
-  else {
+    let requestUrl = new URL(event.request.url);
+    
+    // loading the index page from cache when wizard at on the browser.
+    if (requestUrl.origin === location.origin) {
+      if (requestUrl.pathname === '/') {
+        caches.match(event.request).then(response => {
+          if (response) {
+            // respond with the index page skeleton in cache
+             event.respondWith(caches.match('/index.html'));
+             return;
+          }
+        });
+      }
+    }
+   
+    // responding to any other request on the page.
     event.respondWith(
-      caches.match(event.request).then(function(response) {
+      caches.match(event.request).then(response => {
         return response || fetch(event.request);
+      }).catch(error => {
+        return error;
       })
     );
-  }
+
 });
