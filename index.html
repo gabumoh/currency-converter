@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.1/journal/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/stylesheet.css">
+    <title>Converter$¥€£</title>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navBarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a href="index.html" class="navbar-brand">Currency$Converter</a>
+        </div>
+    </nav>
+
+    <div class="currency-header">
+        <div class="currency-header-overlay">
+            <div class="container">
+                <div class="row ma">
+                    <div class="col-md-8">
+                        <h3 class="display-3 py-2 text-primary text-center" id="home">Currency Conversion as real as can be?</h3>
+                        <p class="lead"></p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body bg-primary text-white">
+                                <form id="form">
+                                    <div class="input-group py-3">
+                                        <input type="number" class="form-control" placeholder="Amount" id="amount">
+                                    </div>
+                                    <div class="input-group py-3">
+                                        <select class="form-control select" id="convertFrom">
+                                            <option value="Null">Convert From...</option>
+                                            <option value="USD">Dollar</option>
+                                            <option value="GBP">Pound</option>
+                                            <option value="EUR">Euro</option>
+                                            <option value="NGN">Naira</option>
+
+                                            </select>
+                                    </div>
+                                    <div class="input-group py-3">
+                                        <select class="form-control" id="convertTo">
+                                                <option value="Null">Convert To...</option>
+                                                <option value="USD">Dollar</option>
+                                                <option value="GBP">Pound</option>
+                                                <option value="EUR">Euro</option>
+                                                <option value="NGN">Naira</option>
+                                            </select>
+                                    </div>
+                                    <div class="input-group py-3">
+                                        <input type="submit" value="CONVERT" class="form-control btn btn-outline-light btn-block">
+                                    </div>
+                                    <div class="input-group py-0">
+                                        <input type="reset" class="form-control btn btn-outline-light btn-block" value="CLEAR" id="clear">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="src/js/converter.js"></script>
+</body>
+
+</html>

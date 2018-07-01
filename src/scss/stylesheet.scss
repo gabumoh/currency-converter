@@ -1,0 +1,17 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.currency-header {
+    margin-top: 10rem;
+    h3 {
+        margin-top: .8em;
+    }
+    .fa {
+        font-size: 3rem;
+    }
+    .option {
+        overflow: scroll;
+        height: 10px;
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "name": "currencyconverter",
+    "version": "1.0.0",
+    "description": "Currency Converter App",
+    "main": "index.html",
+    "scripts": {
+        "start": "gulp serve"
+    },
+    "author": "Gabriel Umoh",
+    "license": "MIT",
+    "devDependencies": {
+        "browser-sync": "^2.24.5",
+        "gulp": "^3.9.1",
+        "gulp-sass": "^4.0.1"
+    }
+}
